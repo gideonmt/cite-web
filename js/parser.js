@@ -1,4 +1,4 @@
-const Parser = {
+export const Parser = {
   parseName(person) {
     const parsed = { first: '', last: '', full: '' };
 

@@ -1,4 +1,4 @@
-const Chicago = {
+export const Chicago = {
   joinNamesBiblio(people) {
     if (!Array.isArray(people) || people.length === 0) return '';
 

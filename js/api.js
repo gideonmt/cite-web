@@ -1,4 +1,4 @@
-const API = {
+export const API = {
   async searchSources(query) {
     let url = '';
     let mode = '';

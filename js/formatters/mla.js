@@ -1,4 +1,4 @@
-const MLA = {
+export const MLA = {
   formatBibliography(entry) {
     let result = '';
 

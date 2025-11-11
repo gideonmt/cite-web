@@ -1,4 +1,4 @@
-const Storage = {
+export const Storage = {
   library: {
     metadata: { collection: "my_collection", records: 0 },
     records: []

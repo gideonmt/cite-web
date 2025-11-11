@@ -1,4 +1,4 @@
-const Converter = {
+export const Converter = {
   toBibJSON(source, sourceType) {
     if (sourceType === 'crossref') {
       return this.fromCrossRef(source);

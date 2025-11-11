@@ -1,4 +1,4 @@
-const UI = {
+export const UI = {
   showMessage(elementId, message, type = 'success') {
     const el = document.getElementById(elementId);
     el.innerHTML = `<div class="${type}">${message}</div>`;

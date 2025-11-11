@@ -1,4 +1,4 @@
-const APA = {
+export const APA = {
   formatBibliography(entry) {
     let result = '';
 

@@ -1,4 +1,4 @@
-const App = {
+export const App = {
   currentResults: [],
   currentEntry: null,
 
@@ -582,8 +582,3 @@ const App = {
     return issues;
   }
 };
-
-// Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  App.init();
-});
