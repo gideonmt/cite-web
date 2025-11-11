@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cite - Citation Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>cite</h1>
+      <div class="subtitle">Citation Management Tool</div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="add">Add Citation</button>
+      <button class="tab" data-tab="export">Export</button>
+      <button class="tab" data-tab="view">View Library</button>
+    </div>
+
+    <div id="add" class="tab-content active">
+      <h2>Add New Citation</h2>
+      <div id="add-message"></div>
+      
+      <div class="form-group">
+        <label for="search-query">Search by DOI, ISBN, or Title/Author</label>
+        <input type="text" id="search-query" placeholder="e.g., 10.1186/1758-2946-3-47 or 978-0-226-45808-3 or quantum computing feynman">
+      </div>
+      
+      <button id="search-btn">Search</button>
+      
+      <div id="search-results" class="search-results"></div>
+      <div id="entry-details"></div>
+    </div>
+
+    <div id="export" class="tab-content">
+      <h2>Export Bibliography</h2>
+      <div id="export-message"></div>
+      
+      <div class="form-group">
+        <label for="export-style">Citation Style</label>
+        <select id="export-style">
+          <option value="chicago">Chicago (17th ed.)</option>
+          <option value="mla">MLA (9th ed.)</option>
+          <option value="apa">APA (7th ed.)</option>
+          <option value="ieee" disabled>IEEE (coming soon)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="export-format">Output Format</label>
+        <select id="export-format">
+          <option value="richtext">Rich Text (Copy/Paste)</option>
+          <option value="html">HTML File</option>
+          <option value="markdown">Markdown</option>
+        </select>
+      </div>
+      
+      <button id="export-btn">Generate</button>
+      <div class="btn-group">
+        <button id="download-btn" class="btn-secondary" style="display:none;">Download File</button>
+        <button id="copy-btn" class="btn-secondary" style="display:none;">Copy to Clipboard</button>
+      </div>
+      
+      <div id="export-output"></div>
+    </div>
+
+    <div id="view" class="tab-content">
+      <h2>Your Library</h2>
+      <div id="view-message"></div>
+      
+      <div class="btn-group">
+        <button id="import-btn">Import JSON</button>
+        <button id="export-json-btn" class="btn-secondary">Export JSON</button>
+        <button id="clear-btn" class="btn-secondary">Clear All</button>
+      </div>
+      <input type="file" id="import-file" accept=".json" style="display:none;">
+      
+      <div class="json-viewer" id="library-viewer"></div>
+    </div>
+  </div>
+
+  <script src="storage.js"></script>
+  <script src="api.js"></script>
+  <script src="converter.js"></script>
+  <script src="parser.js"></script>
+  <script src="chicago.js"></script>
+  <script src="mla.js"></script>
+  <script src="apa.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

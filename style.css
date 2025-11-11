@@ -1,0 +1,261 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #666;
+  --accent-color: #888;
+  --bg-white: #fff;
+  --bg-light: #f5f5f5;
+  --bg-lighter: #f9f9f9;
+  --border-color: #ddd;
+  --border-dark: #ccc;
+  --text-color: #333;
+  --text-muted: #666;
+  --error-bg: #fee;
+  --error-border: #fcc;
+  --error-text: #d00;
+  --success-bg: #efe;
+  --success-border: #cfc;
+  --success-text: #060;
+  --warning-color: #f90;
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: 'Times New Roman', Times, serif; 
+  line-height: 1.6; 
+  color: var(--text-color); 
+  background: var(--bg-light); 
+}
+
+.container { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+header { 
+  background: var(--bg-white); 
+  padding: 30px; 
+  margin-bottom: 30px; 
+  border-bottom: 3px solid var(--primary-color); 
+}
+
+h1 { 
+  font-size: 32px; 
+  margin-bottom: 10px; 
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.subtitle { 
+  color: var(--text-muted); 
+  font-size: 14px; 
+}
+
+.tabs { 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 20px; 
+  background: var(--bg-white); 
+  padding: 10px; 
+}
+
+.tab { 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  border: 1px solid var(--border-color); 
+  background: var(--bg-white); 
+  color: var(--primary-color);
+}
+
+.tab.active { 
+  background: var(--primary-color); 
+  color: var(--bg-white); 
+  border-color: var(--primary-color); 
+}
+
+.tab-content { 
+  display: none; 
+  background: var(--bg-white); 
+  padding: 30px; 
+  min-height: 400px; 
+}
+
+.tab-content.active { 
+  display: block; 
+}
+
+.form-group { 
+  margin-bottom: 20px; 
+}
+
+label { 
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+}
+
+input, select, textarea { 
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid var(--border-color); 
+  font-family: inherit; 
+  font-size: 14px; 
+}
+
+button { 
+  padding: 10px 20px; 
+  background: var(--primary-color); 
+  color: var(--bg-white); 
+  border: none; 
+  cursor: pointer; 
+  font-size: 14px; 
+}
+
+button:hover { 
+  background: var(--secondary-color);
+  color: var(--bg-white);
+}
+
+button:disabled { 
+  background: var(--border-dark); 
+  cursor: not-allowed; 
+}
+
+.btn-secondary { 
+  background: var(--secondary-color); 
+}
+
+.btn-secondary:hover { 
+  background: var(--accent-color); 
+}
+
+.btn-group { 
+  display: flex; 
+  gap: 10px; 
+  margin: 10px 0; 
+}
+
+.search-results { 
+  margin-top: 20px; 
+}
+
+.result-item { 
+  padding: 15px; 
+  border: 1px solid var(--border-color); 
+  margin-bottom: 10px; 
+  cursor: pointer; 
+}
+
+.result-item:hover { 
+  background: var(--bg-lighter); 
+}
+
+.result-num { 
+  font-weight: bold; 
+  color: var(--text-muted); 
+}
+
+.output-section { 
+  margin-top: 30px; 
+}
+
+.output-section h2 { 
+  font-size: 20px; 
+  margin-bottom: 15px; 
+  padding-bottom: 10px; 
+  border-bottom: 2px solid var(--primary-color); 
+}
+
+.note { 
+  background: var(--bg-light); 
+  padding: 15px; 
+  margin-top: 20px; 
+  border-left: 3px solid var(--border-dark); 
+  color: var(--text-muted); 
+  font-size: 14px; 
+}
+
+.json-viewer { 
+  background: var(--bg-lighter); 
+  padding: 15px; 
+  border: 1px solid var(--border-color); 
+  font-family: monospace; 
+  font-size: 12px; 
+  overflow-y: auto; 
+}
+
+.error { 
+  color: var(--error-text); 
+  padding: 10px; 
+  background: var(--error-bg); 
+  border: 1px solid var(--error-border); 
+  margin-bottom: 15px; 
+}
+
+.success { 
+  color: var(--success-text); 
+  padding: 10px; 
+  background: var(--success-bg); 
+  border: 1px solid var(--success-border); 
+  margin-bottom: 15px; 
+}
+
+.loading { 
+  text-align: center; 
+  padding: 20px; 
+  color: var(--text-muted); 
+}
+
+.warning {
+  color: var(--warning-color);
+  cursor: help;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.entry-item {
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+  background: var(--bg-white);
+}
+
+.entry-item:hover {
+  background: var(--bg-lighter);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.entry-title {
+  font-weight: bold;
+  flex: 1;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.entry-actions button {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.entry-details {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 5px;
+}
